@@ -195,16 +195,39 @@ a:hover {
 
 .project-list a {
   display: grid;
-  grid-template-columns: 32px 1fr auto;
+  grid-template-columns: 120px 32px 1fr auto;
   align-items: center;
   gap: 16px;
-  padding: 16px 0;
+  padding: 12px 0;
   text-decoration: none;
   color: var(--text);
 }
 
 .project-list a:hover {
   color: var(--accent);
+}
+
+.project-list a:hover .project-thumb {
+  opacity: 1;
+}
+
+.project-thumb {
+  width: 120px;
+  height: 63px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-num {
@@ -445,7 +468,11 @@ a:hover {
 /* Responsive */
 @media (max-width: 480px) {
   .project-list a {
-    grid-template-columns: 24px 1fr;
+    grid-template-columns: 80px 24px 1fr;
+  }
+  .project-thumb {
+    width: 80px;
+    height: 42px;
   }
   .project-meta {
     display: none;

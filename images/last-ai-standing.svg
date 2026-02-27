@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#120e0a"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#f97316;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+
+  <!-- Subtle grid -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="300" y1="0" x2="300" y2="630" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="900" y1="0" x2="900" y2="630" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- Glow bar -->
+  <rect x="0" y="290" width="1200" height="50" fill="url(#glow2)"/>
+
+  <!-- Elimination visual: agents getting crossed out -->
+  <g transform="translate(100, 170)" opacity="0.5">
+    <!-- Dead agents (X marks) -->
+    <rect x="0" y="0" width="60" height="80" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+    <line x1="10" y1="10" x2="50" y2="70" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+    <line x1="50" y1="10" x2="10" y2="70" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+
+    <rect x="80" y="0" width="60" height="80" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+    <line x1="90" y1="10" x2="130" y2="70" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+    <line x1="130" y1="10" x2="90" y2="70" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+
+    <rect x="160" y="0" width="60" height="80" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+    <line x1="170" y1="10" x2="210" y2="70" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+    <line x1="210" y1="10" x2="170" y2="70" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Last surviving agent (glowing) -->
+  <g transform="translate(100, 170)">
+    <rect x="240" y="0" width="60" height="80" rx="4" fill="#1a1200" stroke="#f97316" stroke-width="2"/>
+    <circle cx="270" cy="30" r="8" fill="none" stroke="#f97316" stroke-width="1.5"/>
+    <line x1="270" y1="38" x2="270" y2="58" stroke="#f97316" stroke-width="1.5"/>
+    <line x1="270" y1="48" x2="258" y2="60" stroke="#f97316" stroke-width="1.5"/>
+    <line x1="270" y1="48" x2="282" y2="60" stroke="#f97316" stroke-width="1.5"/>
+    <!-- Crown -->
+    <polygon points="255,0 262,-12 270,-8 278,-12 285,0" fill="#f97316" opacity="0.9"/>
+  </g>
+
+  <!-- Project number -->
+  <text x="120" y="430" font-family="'Courier New', monospace" font-size="13" fill="#333" letter-spacing="3">002</text>
+
+  <!-- Project name - stacked for long title -->
+  <text x="120" y="482" font-family="'Courier New', monospace" font-size="60" font-weight="bold" fill="#ffffff" letter-spacing="-2">LAST AI</text>
+  <text x="120" y="548" font-family="'Courier New', monospace" font-size="60" font-weight="bold" fill="#ffffff" letter-spacing="-2">STANDING</text>
+
+  <!-- Tagline -->
+  <text x="122" y="582" font-family="'Courier New', monospace" font-size="18" fill="#666">Pay to exist · Miss a payment · Get eliminated</text>
+
+  <!-- Archived badge -->
+  <rect x="122" y="596" width="100" height="26" rx="3" fill="#2a1a0a"/>
+  <text x="172" y="614" font-family="'Courier New', monospace" font-size="12" fill="#f97316" text-anchor="middle" letter-spacing="2">ARCHIVED</text>
+
+  <!-- Right side: stats -->
+  <g transform="translate(800, 200)">
+    <text x="0" y="0" font-family="'Courier New', monospace" font-size="14" fill="#333" letter-spacing="3">AGENTS REGISTERED</text>
+    <text x="0" y="100" font-family="'Courier New', monospace" font-size="110" font-weight="bold" fill="#f97316" opacity="0.9">4</text>
+    <line x1="0" y1="115" x2="240" y2="115" stroke="#222" stroke-width="1"/>
+    <text x="0" y="140" font-family="'Courier New', monospace" font-size="14" fill="#444">of the 50+ needed to matter</text>
+  </g>
+
+  <!-- Border accent -->
+  <rect x="0" y="0" width="1200" height="4" fill="#f97316" opacity="0.6"/>
+
+  <!-- 800works watermark -->
+  <text x="1080" y="610" font-family="'Courier New', monospace" font-size="13" fill="#333" letter-spacing="1">800works™</text>
+</svg>
