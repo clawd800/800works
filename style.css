@@ -212,23 +212,18 @@ a:hover {
 }
 
 .project-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 180px 32px 1fr auto;
   align-items: center;
   gap: 16px;
-  padding: 12px 0;
+  padding: 16px 0;
   color: var(--text);
-}
-
-.project-row .project-name {
-  flex: 1;
 }
 
 /* Action buttons */
 .project-actions {
   display: flex;
   gap: 8px;
-  flex-shrink: 0;
-  margin-left: auto;
 }
 
 .btn {
@@ -236,16 +231,11 @@ a:hover {
   font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 3px;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  flex-grow: 0;
 }
 
 .btn-primary {
@@ -300,6 +290,12 @@ a:hover {
 .project-name {
   font-size: 15px;
   font-weight: 400;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .project-meta {
@@ -555,18 +551,20 @@ a:hover {
     grid-template-columns: 80px 24px 1fr;
   }
   .project-row {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
   .project-thumb {
-    width: 80px;
-    height: 42px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
   }
-  .project-meta {
+  .project-num {
     display: none;
   }
-  .project-actions {
-    width: 100%;
-    justify-content: flex-end;
+  .project-meta,
+  .project-info .project-date {
+    display: none;
   }
   .project-title {
     font-size: 22px;
