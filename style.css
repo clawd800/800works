@@ -228,6 +228,7 @@ a:hover {
   display: flex;
   gap: 8px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .btn {
@@ -240,8 +241,11 @@ a:hover {
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .btn-primary {
