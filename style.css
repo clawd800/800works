@@ -193,9 +193,10 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
-.project-list a {
+.project-list a,
+.project-row {
   display: grid;
-  grid-template-columns: 120px 32px 1fr auto;
+  grid-template-columns: 120px 32px 1fr auto auto;
   align-items: center;
   gap: 16px;
   padding: 12px 0;
@@ -203,12 +204,56 @@ a:hover {
   color: var(--text);
 }
 
-.project-list a:hover {
+.project-list a:hover,
+.project-row:hover {
   color: var(--accent);
 }
 
-.project-list a:hover .project-thumb {
+.project-list a:hover .project-thumb,
+.project-row:hover .project-thumb {
   opacity: 1;
+}
+
+/* Action buttons */
+.project-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  text-decoration: none;
 }
 
 .project-thumb {
@@ -490,7 +535,8 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 480px) {
-  .project-list a {
+  .project-list a,
+  .project-row {
     grid-template-columns: 80px 24px 1fr;
   }
   .project-thumb {
@@ -499,6 +545,10 @@ a:hover {
   }
   .project-meta {
     display: none;
+  }
+  .project-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
   }
   .project-title {
     font-size: 22px;
