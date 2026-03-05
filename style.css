@@ -193,10 +193,9 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
-.project-list a,
-.project-row {
+.project-list a {
   display: grid;
-  grid-template-columns: 120px 32px 1fr auto auto;
+  grid-template-columns: 120px 32px 1fr auto;
   align-items: center;
   gap: 16px;
   padding: 12px 0;
@@ -204,20 +203,31 @@ a:hover {
   color: var(--text);
 }
 
-.project-list a:hover,
-.project-row:hover {
+.project-list a:hover {
   color: var(--accent);
 }
 
-.project-list a:hover .project-thumb,
-.project-row:hover .project-thumb {
+.project-list a:hover .project-thumb {
   opacity: 1;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  color: var(--text);
+}
+
+.project-row .project-name {
+  flex: 1;
 }
 
 /* Action buttons */
 .project-actions {
   display: flex;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .btn {
@@ -535,9 +545,11 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 480px) {
-  .project-list a,
-  .project-row {
+  .project-list a {
     grid-template-columns: 80px 24px 1fr;
+  }
+  .project-row {
+    flex-wrap: wrap;
   }
   .project-thumb {
     width: 80px;
@@ -547,7 +559,7 @@ a:hover {
     display: none;
   }
   .project-actions {
-    grid-column: 1 / -1;
+    width: 100%;
     justify-content: flex-end;
   }
   .project-title {
