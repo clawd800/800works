@@ -486,6 +486,32 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
+/* Archived screenshots */
+.screenshot-gallery {
+  display: grid;
+  gap: 24px;
+}
+
+.screenshot a {
+  display: block;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.screenshot figcaption {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
 /* Wrapup callout */
 .wrapup-box {
   background: var(--bg-2);
